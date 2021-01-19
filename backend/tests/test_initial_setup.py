@@ -13,4 +13,9 @@ class TestBaseApplication:
         given = __import__('app').create_app()
         expected = __import__('flask').Flask
 
-        assert isinstance(given, expected)
+        assert isinstance(given, expected), \
+            'The function create_app does not return an instance of Flask'
+
+
+    def test_flask_routes(self):
+        ...
